@@ -14,14 +14,14 @@
 *
 **/
      
-     
-#include<stdio.h>
+#include <iostream>
+using namespace std;
 int main()
 {
     int n,v=1,z;
-    printf("Length of diagonal must be greater than 2 for pattern to be observable.\n");
-    printf("Enter the length of the diagonal:");
-    scanf("%d",&n);
+    cout<<"Length of diagonal must be greater than 2 for pattern to be observable.\n";
+    cout<<"Enter the length of the diagonal:";
+    cin>>n;
 
 if(n%2!=0&&n>=3)
 {
@@ -42,45 +42,45 @@ if(n%2!=0&&n>=3)
                 printf(" ");
 
         }
-        printf("\n");
+        cout<<"\n";
         v=v+2;
     }
 
      for(int d=1; d<=(n/2); d++)
-            printf(" ");
+            cout<<" ";
 
      for(int e=1; e<=n-1;e++)
      {
-         printf("#");
+         cout<<"#";
 
          for(int f=1;f<=2*(n/2);f++)
-            printf(" ");
+            cout<<" ";
      }
-     printf("\n");
+     cout<<"\n";
 
      z=n-3;
      for(int i=n/2; i>=1; i--)
     {
         for(int b=1; b<i; b++)
-            printf(" ");
+            cout<<" ";
 
          for ( int a=1; a<=n-1; a++)
         {
-            printf("#");
+            cout<<"#";
 
             for(int j=z; j<n-2; j++)
-                printf(" ");
+                cout<<" ";
             if(a!=n-1)
-                printf("#");
+                cout<<"#";
             for(int k=1;k<=2*(i-1); k++)
-                printf(" ");
+                cout<<" ";
 
         }
-        printf("\n");
+        cout<<"\n";
         z-=2;
     }
 }
 else
-    printf("Pattern not possible!");
+    cout<<"Pattern not possible!";
     return (0);
 }
